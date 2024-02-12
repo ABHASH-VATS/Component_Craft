@@ -5,6 +5,7 @@ import {ScrollToSection} from '../components/scroll-to-top-and-bottom/scroll-to-
 import {ModalTest} from "../components/custom-modal-popup/modal-test";
 import {ExpandingSectionsOnHover} from "../components/expandingSectionsOnHover/ExpandingSectionsOnHover";
 import {ScrollToTopAndBottom} from "../components/scroll-to-top-and-bottom/index";
+import {SearchAutocomplete} from "../components/search-autocomplete-with-api";
 
 function ComponentCalling(props){
     return(
@@ -14,6 +15,7 @@ function ComponentCalling(props){
                     {props.str === "ModalTest" ?<div className="centered"><ModalTest/></div>:null}
                     {props.str === "ExpandingSectionsOnHover" ?<div className="centered"><ExpandingSectionsOnHover/></div>:null}
                     {props.str === "ScrollToTopAndBottom" ?<div className="centered"><ScrollToTopAndBottom/></div>:null}
+                    {props.str === "SearchAutocomplete" ?<div className="centered"><SearchAutocomplete/></div>:null}
                 </div>
     )
 }

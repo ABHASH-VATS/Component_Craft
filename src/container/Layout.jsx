@@ -1,18 +1,19 @@
 import React, {  useState, setState, Component, useEffect } from 'react';
 import "./Layout.css"
-import ComponentCalling from './ComponentCalling';
+import ComponentCalling from "./ComponentCalling";
 import {Accordian} from "../components/accordian";
 import {ScrollToSection} from '../components/scroll-to-top-and-bottom/scroll-to-section';
 import {ModalTest} from "../components/custom-modal-popup/modal-test";
 import {ExpandingSectionsOnHover} from "../components/expandingSectionsOnHover/ExpandingSectionsOnHover";
 import {ScrollToTopAndBottom} from "../components/scroll-to-top-and-bottom/index";
+import {SearchAutocomplete} from "../components/search-autocomplete-with-api";
 
 // Functional component =====================================================
 function Layout(){
     const [state, setState] = useState("")
     var openAccordian = () => {
         setState("Accordian")
-        // document.getElementById("Accordian").style.color
+        document.getElementById("Accordian").style.color = "blue"
     }
     var ScrollToSection = () => {
         setState("ScrollToSection")
@@ -26,21 +27,26 @@ function Layout(){
     var ScrollToTopAndBottom = () => {
         setState("ScrollToTopAndBottom")
     }
+
+    var SearchAutocomplete = () => {
+        setState("SearchAutocomplete")
+    }
     return(
         <div>
-                <div className="split left">
-                    <div className="List">
-                        <ul style={{listStyleType:"none"}}>
-                            <li onClick={openAccordian}><span className='ListText' id="Accordian">Accordian</span></li>
-                            <li onClick={ScrollToSection}><span className='ListText' id="scrollTopToBottom">Scroll top to bottom</span></li>
-                            <li onClick={ModalTest}><span className='ListText' id="ModalTest">Modal test</span></li>
-                            <li onClick={ExpandingSectionsOnHover}><span className='ListText' id="ExpandingSectionsOnHover">Expanding sections on hover</span></li>
-                            <li onClick={ScrollToTopAndBottom}><span className='ListText' id="ScrollToTopAndBottom">Scroll to top and bottom</span></li>
-                        </ul>
-                    </div>
+            <div className="split left">
+                <div className="List">
+                    <ul style={{listStyleType:"none"}}>
+                        <li onClick={openAccordian}><a href="#" className='ListText' id="Accordian">Accordian</a></li>
+                        <li onClick={ScrollToSection}><a href="#" className='ListText' id="scrollTopToBottom">Scroll top to bottom</a></li>
+                        <li onClick={ModalTest}><a href="#" className='ListText' id="ModalTest">Modal test</a></li>
+                        <li onClick={ExpandingSectionsOnHover}><a href="#" className='ListText' id="ExpandingSectionsOnHover">Expanding sections on hover</a></li>
+                        <li onClick={ScrollToTopAndBottom}><a href="#" className='ListText' id="ScrollToTopAndBottom">Scroll to top and bottom</a></li>
+                        <li onClick={SearchAutocomplete}><a href="#" className='ListText' id="SearchAutocomplete">Search auto complete</a></li>
+                    </ul>
                 </div>
-                <ComponentCalling str={state}/>
             </div>
+            <ComponentCalling str={state}/>
+        </div>
     )
 }
 
