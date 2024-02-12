@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function Tabs({ tabsContent, onChange }) {
   const [currentTabIndex, setCurrentTabIndex] = useState(0);

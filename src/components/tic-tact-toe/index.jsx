@@ -2,7 +2,7 @@
 // 3 4 5
 // 6 7 8
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 
 function Square({ value, onClick }) {
@@ -13,7 +13,7 @@ function Square({ value, onClick }) {
   );
 }
 
-export default function TicTacToe() {
+export function TicTacToe() {
   const [squares, setSquares] = useState(Array(9).fill(""));
   const [isXTurn, setIsXTurn] = useState(true);
   const [status, setStatus] = useState("");

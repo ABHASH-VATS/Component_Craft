@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import User from "./user";
 import './styles.css';
 
-export default function GithubProfileFinder() {
+export function GithubProfileFinder() {
   const [userName, setUserName] = useState("sangammukherjee");
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);

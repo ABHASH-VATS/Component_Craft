@@ -1,3 +1,4 @@
+import React from 'react';
 import Tabs from "./tabs";
 import './tabs.css';
 
@@ -5,7 +6,7 @@ function RandomComponent() {
   return <h1>Some random content</h1>;
 }
 
-export default function TabTest() {
+export function TabTest() {
   const tabs = [
     {
       label: "Tab 1",

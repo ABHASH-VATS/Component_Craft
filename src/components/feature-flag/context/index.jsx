@@ -1,9 +1,9 @@
-import { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import featureFlagsDataServiceCall from "../data";
 
 export const FeatureFlagsContext = createContext(null);
 
-export default function FeatureFlagGlobalState({ children }) {
+export function FeatureFlagGlobalState({ children }) {
   const [loading, setLoading] = useState(false);
   const [enabledFlags, setEnabledFlags] = useState({});
 
