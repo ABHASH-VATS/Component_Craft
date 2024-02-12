@@ -26,7 +26,7 @@ import {UseWindowResizeTest} from "../components/use-window-resize/test";
 
 // Functional component =====================================================
 function Layout(){
-    const [state, setState] = useState("")
+    const [state, setState] = useState("Accordian")
     var openAccordian = () => {
         setState("Accordian")
     }
